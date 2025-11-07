@@ -40,6 +40,8 @@ scripts/
 
 README.md                        # this file
 
+
+
 Quick start
 
 ⚠️ Replace placeholders (<ip>, <user>, key name) with your real values
@@ -83,6 +85,8 @@ ssh my-timeweb -v
 
 Now you no longer need to specify the key path on each connection or in rsync.
 
+
+
 Using the automation script
 
 The repository also contains a small helper script:
@@ -98,6 +102,7 @@ copies timeweb / timeweb.pub into ~/.ssh/ with 600 permissions;
 
 appends a Host block to ~/.ssh/config.
 
+
 Before running, edit the variables at the top of the script:
 
 KEY_NAME="timeweb"
@@ -110,6 +115,7 @@ Then:
 
 bash scripts/setup_ssh_config.sh
 ssh my-timeweb
+
 
 File permissions and security
 
@@ -126,6 +132,7 @@ chmod 600 ~/.ssh/timeweb ~/.ssh/config — only the owner can read/write these f
 OpenSSH will refuse to use keys that are world-readable (e.g. 0644), and will show
 “Bad permissions” warnings.
 
+
 Requirements
 
 Linux or any Unix-like system with:
@@ -135,6 +142,7 @@ OpenSSH client (ssh, ssh-keygen),
 standard shell tools (bash, mkdir, chmod, cp, cat).
 
 No additional libraries or packages are required.
+
 
 Possible extensions
 
